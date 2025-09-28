@@ -1,0 +1,176 @@
+\documentclass[conference]{IEEEtran}
+
+% --- Pacotes ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{hyperref}
+
+\sisetup{separate-uncertainty=true}
+
+% --- Dados do relatório ---
+\title{Estudo Experimental do Efeito Fotoelétrico}
+
+\author{
+\IEEEauthorblockN{Gabriel Dantas de Moraes Almeida (231013064)}
+\IEEEauthorblockA{Universidade de Brasília (UnB)\\
+Email: gabriel.almeida@aluno.unb.br}
+\and
+\IEEEauthorblockN{Iuri Clemente Rezende (231025619)}
+\IEEEauthorblockA{Universidade de Brasília (UnB)\\
+Email: iuri.rezende@aluno.unb.br}
+\and
+\IEEEauthorblockN{Kelvin Evangelista Neiva (231013144)}
+\IEEEauthorblockA{Universidade de Brasília (UnB)\\
+Email: kelvin.neiva@aluno.unb.br}
+}
+
+\date{27 de maio de 2025}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Este trabalho apresenta o estudo do efeito fotoelétrico, fenômeno no qual elétrons são emitidos de uma superfície metálica ao ser iluminada por radiação eletromagnética de frequência suficientemente alta. O objetivo foi determinar a constante de Planck, a função trabalho da fotocélula e a frequência de corte da radiação incidente. Foram realizadas medições utilizando uma lâmpada de mercúrio, rede de difração, filtros e fotocélula. Os resultados obtidos indicaram a correta ordem de grandeza da constante de Planck e permitiram discutir limitações experimentais.
+\end{abstract}
+
+\section{Introdução}
+O efeito fotoelétrico consiste na emissão de elétrons por um material metálico exposto à radiação eletromagnética com frequência superior a um valor mínimo denominado \textit{frequência de corte}. Esse fenômeno foi fundamental para o desenvolvimento da mecânica quântica, pois não pode ser explicado pela teoria clássica da luz.  
+
+O presente experimento busca: 
+\begin{itemize}
+    \item Determinar a constante de Planck ($h$);
+    \item Calcular a função trabalho ($\omega_0$) da fotocélula utilizada;
+    \item Identificar a frequência de corte ($\nu_0$).
+\end{itemize}
+
+\section{Materiais e Métodos}
+O experimento foi realizado em laboratório utilizando os seguintes equipamentos:
+\begin{itemize}
+    \item Fotocélula;
+    \item Rede de difração (600 linhas/mm);
+    \item Filtros: \SI{580}{nm} e \SI{525}{nm};
+    \item Fenda de abertura ajustável;
+    \item Lente convergente ($f = +\SI{100}{mm}$);
+    \item Lâmpada de mercúrio;
+    \item Trilho de sustentação;
+    \item Amplificador universal de medição;
+    \item Multímetro digital.
+\end{itemize}
+
+A lâmpada de mercúrio foi posicionada em uma extremidade do trilho e a fotocélula na outra. A fenda foi colocada a \SI{9}{cm} da lâmpada e a lente a aproximadamente \SI{20}{cm}.  
+O amplificador foi configurado como eletrômetro ($R_{in} > 10^{13}\ \Omega$) com ganho 100. O voltímetro foi ajustado para escala de \SI{2}{V} DC.  
+
+\subsection{Procedimentos}
+\begin{enumerate}
+    \item Selecionar a faixa monocromática desejada com a rede de difração;
+    \item Com a janela da fotocélula fechada, verificar o zero do amplificador;
+    \item Abrir a janela, aguardar estabilização e medir a tensão;
+    \item Fechar a janela.
+\end{enumerate}
+
+\subsection{Cuidados experimentais}
+\begin{itemize}
+    \item Os equipamentos foram ligados 15 minutos antes das medidas;
+    \item A lâmpada não deve ser desligada antes do resfriamento (\SI{10}{min});
+    \item Não tocar no bulbo ($T > 100^\circ$C);
+    \item Não olhar diretamente para a lâmpada (radiação UV nociva);
+    \item A janela da fotocélula permaneceu fechada fora das medições.
+\end{itemize}
+
+\section{Resultados Experimentais}
+A relação fundamental é:
+\begin{equation}
+\lambda = d \cdot \sin(\theta), \qquad f = \frac{c}{\lambda} = \frac{c}{d \cdot \sin(\theta)}
+\end{equation}
+
+\subsection{Medições obtidas}
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\toprule
+Medida & $\theta$ [º] & $f$ [$10^{14}$ Hz] & $V$ [V] \\
+\midrule
+azul1 & 13 & 7.996 & 0.812 \\
+azul2 & 15 & 6.949 & 0.663 \\
+azul3 & 16 & 6.525 & 0.660 \\
+verde & 20 & 5.259 & 0.398 \\
+laranja & 21 & 5.019 & 0.333 \\
+azul1 & 12 & 8.651 & 0.826 \\
+azul2 & 15 & 6.949 & 0.690 \\
+azul3 & 16 & 6.525 & 0.686 \\
+verde & 20 & 5.259 & 0.406 \\
+laranja & 21 & 5.019 & 0.338 \\
+azul1 & 13 & 7.996 & 0.860 \\
+azul2 & 15 & 6.949 & 0.657 \\
+azul3 & 16 & 6.525 & 0.670 \\
+verde & 20 & 5.259 & 0.408 \\
+laranja & 21 & 5.019 & 0.340 \\
+\bottomrule
+\end{tabular}
+\caption{Medições realizadas com diferentes filtros.}
+\end{table}
+
+Após a média dos valores:
+\begin{table}[H]
+\centering
+\begin{tabular}{cc}
+\toprule
+Frequência Média [$10^{14}$ Hz] & Tensão Média [V] \\
+\midrule
+8.214 & 0.833 \\
+6.949 & 0.670 \\
+6.525 & 0.672 \\
+5.259 & 0.404 \\
+5.019 & 0.337 \\
+\bottomrule
+\end{tabular}
+\caption{Valores médios de frequência e tensão obtidos.}
+\end{table}
+
+\subsection{Análise}
+A energia cinética máxima é:
+\begin{equation}
+K_{max} = h \cdot f - \omega_0
+\end{equation}
+e o potencial de retardo é dado por:
+\begin{equation}
+V_0(f) = \frac{h}{e} \cdot f - \frac{\omega_0}{e}
+\end{equation}
+
+Constantes obtidas:
+\[
+h_{exp} = 2.48 \times 10^{-34}\ \text{J·s}, \quad
+\omega_0 = 6.51 \times 10^{-20}\ \text{J} = 0.407\ \text{eV}
+\]
+
+Comparação:
+\[
+h_{real} = 6.62 \times 10^{-34}\ \text{J·s}
+\]
+
+Frequência de corte:
+\[
+\nu_0 = 2.628 \times 10^{14}\ \text{Hz}
+\]
+
+\section{Discussão}
+O valor obtido para $h$ foi da mesma ordem de grandeza do esperado, atendendo ao requisito experimental. No entanto, a função trabalho não corresponde a nenhum material conhecido, sugerindo erros experimentais.  
+
+O efeito fotoelétrico só ocorre para frequências acima da frequência de corte, confirmando o modelo quântico da luz de Einstein. A teoria clássica não explica a ausência de emissão para intensidades altas, mas frequências baixas.
+
+\section{Conclusão}
+O experimento permitiu estimar a constante de Planck, ainda que com erro relativo elevado, e compreender conceitos como função trabalho, frequência de corte e potencial de retardo. Observou-se a limitação dos equipamentos e as dificuldades na caracterização exata do material da fotocélula.  
+
+\section*{Referências}
+\begin{thebibliography}{00}
+\bibitem{ceschin} A. Ceschin, \textit{Materiais Elétricos e Magnéticos}. Brasília, DF, 226 p.
+\bibitem{crc} W. M. Haynes (ed.), \textit{CRC Handbook of Chemistry and Physics}, 97ª ed. Boca Raton: CRC Press, 2016.
+\end{thebibliography}
+
+\end{document}
