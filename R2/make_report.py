@@ -1,8 +1,6 @@
-# make_report.py
 from fpdf import FPDF
-import analyze  # importa direto
+import analyze 
 
-# Roda a análise e pega resultados
 results = analyze.run_analysis(make_plot=True)
 
 pdf = FPDF()
