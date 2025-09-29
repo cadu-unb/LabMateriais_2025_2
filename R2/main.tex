@@ -1,0 +1,217 @@
+\documentclass[conference]{IEEEtran}
+
+% --- Pacotes ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{mdframed}
+
+% --- Configurações ---
+\sisetup{
+    separate-uncertainty=true,
+    output-decimal-marker={,}
+}
+\definecolor{primaryBlue}{HTML}{003366}
+\definecolor{accentTeal}{HTML}{00629B}
+\definecolor{lightGray}{HTML}{F8F8F8}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=primaryBlue,
+    citecolor=accentTeal,
+    urlcolor=accentTeal,
+    pdftitle={Experimento 2 - Efeito Fotoelétrico},
+    pdfauthor={Larissa Simões, Thiago Ferreira}
+}
+
+% --- Ambiente de destaque ---
+\newmdenv[
+  linecolor=accentTeal,
+  linewidth=1.5pt,
+  roundcorner=7pt,
+  backgroundcolor=lightGray,
+  innertopmargin=6pt,
+  innerbottommargin=6pt,
+  innerleftmargin=8pt,
+  innerrightmargin=8pt,
+  skipabove=8pt,
+  skipbelow=8pt
+]{highlightbox}
+
+% --- Página ---
+\pagestyle{empty}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{4pt}
+\renewcommand{\baselinestretch}{1.05}\selectfont
+
+% --- Título ---
+\title{\color{primaryBlue}Experimento 2: Estudo Dirigido sobre Efeito Fotoelétrico}
+\author{
+\IEEEauthorblockN{Larissa Simões – 232028230}
+\IEEEauthorblockA{Turma 01}
+\and
+\IEEEauthorblockN{Thiago Ferreira – 231025717}
+\IEEEauthorblockA{Turma 01}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Este relatório aborda o estudo do efeito fotoelétrico, fenômeno no qual elétrons são emitidos de uma superfície metálica quando exposta à radiação eletromagnética de frequência suficientemente elevada. O propósito do experimento foi estimar a constante de Planck, a função trabalho da fotocélula e a frequência de corte da radiação incidente. Para isso, foram utilizados uma lâmpada de mercúrio, rede de difração, filtros e uma fotocélula. Os resultados obtidos possibilitaram a análise da ordem de grandeza da constante de Planck e a discussão de limitações inerentes ao processo experimental.
+\end{abstract}
+
+\begin{IEEEkeywords}
+efeito fotoelétrico, constante de Planck, função trabalho, frequência de corte
+\end{IEEEkeywords}
+
+\section{Introdução}
+O efeito fotoelétrico corresponde à liberação de elétrons de um material metálico quando iluminado por radiação eletromagnética cuja frequência ultrapassa um valor mínimo, conhecido como frequência de corte. Esse fenômeno foi fundamental para o avanço da mecânica quântica, visto que não pode ser descrito adequadamente pelos modelos da física clássica.
+
+\subsection{Objetivos do Experimento:}
+
+\begin{itemize}
+    \item Determinar experimentalmente a constante de Planck ($h$);
+    \item Calcular a função trabalho ($\phi$) da fotocélula utilizada;
+    \item Identificar a frequência de corte ($f_0$) da radiação.
+\end{itemize}
+
+\section{Materiais e Montagem}
+\begin{itemize}
+    \item Fotocélula;
+    \item Rede de difração (\SI{600}{linhas/mm});
+    \item Filtros de cor: \SI{580}{\nano\meter} e \SI{525}{\nano\meter};
+    \item Fenda de abertura ajustável;
+    \item Lente convergente ($f = +\SI{100}{\milli\meter}$);
+    \item Lâmpada de mercúrio;
+    \item Trilho de sustentação;
+    \item Amplificador universal de medição (configurado como eletrômetro);
+    \item Multímetro digital.
+\end{itemize}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{16279478-d25c-4589-a3d5-449dc32c9104.JPG}
+    \caption{Montagem experimental utilizada para o estudo do efeito fotoelétrico.}
+    \label{fig:montagem}
+\end{figure}
+
+\section{Procedimentos Experimentais}
+Inicialmente, a lâmpada foi posicionada em uma das extremidades do trilho e a fotocélula na outra. A fenda foi ajustada a uma distância de \SI{9}{\centi\meter} da fonte, e a lente, a aproximadamente \SI{20}{\centi\meter} da fenda. O voltímetro foi configurado na escala de \SI{2}{\volt} DC. Em seguida, selecionou-se o feixe monocromático por meio da rede de difração. Com a janela da fotocélula inicialmente fechada, realizou-se o ajuste de zero no amplificador. Após a estabilização, a janela foi aberta para registrar a tensão correspondente, sendo fechada ao final de cada medição.
+
+Algumas precauções foram necessárias: o sistema foi ligado \SI{15}{minutos} antes das medições; manteve-se distância do bulbo devido à temperatura elevada (acima de \SI{100}{\celsius}); e evitou-se a observação direta da lâmpada devido à emissão de radiação ultravioleta.
+
+\section{Resultados Experimentais}
+
+A relação fundamental para a frequência ($f$) em função do ângulo de difração ($\theta$), do espaçamento da rede ($d$) e da velocidade da luz ($c$) é dada por:
+
+\begin{align}
+\lambda &= d \cdot \sin(\theta) \\
+\\
+f &= \frac{c}{\lambda} = \frac{c}{d \cdot \sin(\theta)}
+\end{align}
+
+\subsection{Medições obtidas}
+\begin{table}[H]
+\centering
+\caption{Medições de tensão de parada para diferentes frequências.}
+\label{tab:medicoes}
+\begin{tabular}{cccc}
+ \toprule
+\textbf{Medida} & \textbf{$\theta$ / \si{\degree}} & \textbf{$f$ / \SI{e14}{\hertz}} & \textbf{$V$ / \si{\volt}} \\
+\midrule
+Azul 1 & 11 & 8,218 & 1,64 \\
+Azul 2 & 13 & 6,949 & 1,33 \\
+Roxo & 18 & 6,735 & 1,28 \\
+Verde & 20 & 5,368 & 0,96 \\
+Laranja & 21 & 5,125 & 0,91 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Análise}
+A energia cinética máxima ($K_{max}$) dos fotoelétrons é linearmente dependente da frequência ($f$) da luz incidente, conforme a equação de Einstein:
+\begin{equation}
+K_{max} = h \cdot f - \phi
+\end{equation}
+onde $h$ é a constante de Planck e $\phi$ é a função trabalho do material. A energia $K_{max}$ pode ser determinada pelo potencial de retardo ($V_0$), tal que $K_{max} = e \cdot V_0$. Portanto, a relação para o potencial de retardo é:
+\begin{equation}
+V_0(f) = \frac{h}{e} \cdot f - \frac{\phi}{e}
+\end{equation}
+
+A partir de um ajuste linear dos dados da Tabela \ref{tab:medicoes}, foram obtidos os seguintes valores experimentais:
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.75\linewidth]{PHOTO-2025-09-29-09-37-49.jpg}
+\caption{Gráfico de pontos com regressão linear.}
+\label{fig:placeholder}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Constante de Planck experimental:}
+\[ h_{exp} = \SI{3.783e-34}{\joule\second} \]
+\item \textbf{Função trabalho:}
+\[ \phi = \SI{0.306}{\electronvolt} \]
+\end{itemize}
+
+Para fins de comparação, o valor teórico da constante de Planck é:
+\[ h_{real} = \SI{6.626e-34}{\joule\second} \]
+
+A frequência de corte ($f_0$), que é a frequência mínima para a ocorrência do efeito, foi calculada como:
+\[ f_0 = \frac{\phi}{h_{exp}} = \SI{1.295e14}{\hertz} \]
+
+\section{Discussão}
+\subsection{Questões Propostas:}
+
+\begin{enumerate}
+    \item \textbf{Compare o valor da constante de Planck obtido no experimento com o valor encontrado nos livros. Comente a precisão do experimento destacando as possíveis fontes de erro.}\\
+
+    - Valor da constante de Planck obtido experimentalmente:
+    \textbf{\[ h_{exp} = \SI{3.783e-34}{\joule\second} \]}
+    - O valor esperado:
+    \[ h_{real} = \SI{6.626e-34}{\joule\second} \]
+
+    O valor encontrado se aproxima em magnitude do valor presente na literatura.\\
+    
+    \item \textbf{Explique como o potencial de retardo pode afetar o valor de h obtido no experimento.}\\
+
+    A luz em alta frequência incide sobre o cátodo e, portanto, ocorre o efeito fotoelétrico. Os fótons em forma de onda, fornecem energia para os elétrons do material. Se a energia da onda for maior que a função trabalho, elétrons sâo ejetados com k$_{max}$.\\
+
+    \item \textbf{Podemos utilizar o valor da função trabalho encontrado para caracterizar o material do catodo? Explique porque.}\\
+
+    Podemos utilizar a função trabalho para caracterizar o material, dado que a função trabalho é a energia mínima necessária para remover um elétron da superfície de um material específico. Dado que os fotoelétrons em direção ao cátodo, criam uma corrente elétrica dentro da célula.\\
+
+    \item \textbf{Explique utilizando conceitos de física quântica, porque o fenômeno da emissão fotoelétrica não ocorre para frequências abaixo da frequência de corte. É possível explicar o experimento utilizando apenas a física clássica? Explique.}\\
+
+    A física quântica fundamenta o efeito fotoelétrico de forma em que a luz não é uma onda contínua, mas sim pacotes discretos de energia, os fótons. Seguindo que $E$ $=$ $hf$, que implica diretamente na ejeção de elétrons, dado que é definido k$_{max}$ para ejetar os elétrons.
+    No entanto, ao observar a física clássica, conclui-se que não é possível explicar o fenômeno, dado que a emissão de elétrons depende, exclusivamente, da intensidade da luz.\\
+
+    \item \textbf{Explique o que ocorre na célula fotoelétrica desde o momento em que é descarregada, até o momento que a leitura do multímetro é máxima.} \\
+
+    A luz atinge a célula descarregada, elétrons são ejetados do cátodo e viajam para o ânodo, gerando corrente, que faz com que haja diferença de potencial entre as placas. A tensão possui um campo elétrico, que atua como freio, dificultando a passagem de elétrons subsequentes. À medida que o potencial de frenagem aumenta, a corrente diminui até que a leitura do multímetro atinge seu valor máximo. \\
+
+    \item \textbf{Os elétrons que absorvem fótons com a frequência de corte poderiam contribuir para o aumento da tensão obtida com o voltímetro?} \\
+
+    Não, os elétrons absorvem os fótons com a frequência de corte. Isso se explica pela equação do efeito fotoelétrico, a energia cinética máxima de um elétron ejetado é a energia do fóton ($hf$) menos a energia gasta para escapar do material (função trabalho). Então, compreende-se que o os fótons ficariam próximos ao átomo de origem e, consequentemente, seriam reabsorvidos. \\
+    
+\end{enumerate}
+
+
+\section{Conclusão}
+A prática experimental possibilitou determinar aproximadamente
+a constante de Planck, a análise da função trabalho e a identificação da frequência de corte da radiação incidente. Apesar de limitações instrumentais e de algumas discrepâncias em relação ao material da fotocélula, o estudo cumpriu seu objetivo didático, demonstrando a validade do modelo quântico da luz.
+
+\begin{thebibliography}{99}
+    \bibitem{ceschin} A. Ceschin, \textit{Materiais Elétricos e Magnéticos}. Brasília, DF, 226 p.
+    \bibitem{crc} W. M. Haynes (ed.), \textit{CRC Handbook of Chemistry and Physics}, 97ª ed. Boca Raton: CRC Press, 2016.
+\end{thebibliography}
+
+\end{document}
