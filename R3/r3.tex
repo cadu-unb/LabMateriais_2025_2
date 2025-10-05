@@ -1,0 +1,263 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+% Pacotes basicos - maxima compatibilidade Windows
+\usepackage{geometry}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage{graphicx,xcolor,comment,enumerate,multirow,multicol} 
+\usepackage{amsmath,amsthm,amsfonts,amssymb,dsfont,mathtools, array}
+
+\renewcommand{\tablename}{Tabela}
+
+% \input{cor.tex}
+
+% Configuracao da pagina
+\geometry{
+    letterpaper,
+    left=0.75in,
+    right=0.75in,
+    top=0.75in,
+    bottom=1in
+}
+
+% Configuracao das secoes
+\titleformat{\section}[block]
+{\normalfont\fontsize{10}{12}\bfseries}
+{\thesection.}{0.5em}{}
+
+% Remove numeracao das paginas
+\pagestyle{empty}
+
+% Configuracoes de espacamento
+\setlength{\columnsep}{0.25in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+% Titulo centralizado em coluna unica
+\twocolumn[
+\begin{center}
+    {\fontsize{16}{19}\selectfont\bfseries 
+    Experimento 3\\ Estudo dirigido sobre estruturas cristalinas}
+
+    \vspace{1cm}
+    
+    {\fontsize{11}{13}\selectfont 
+     Larissa Simões – 232028230, Carlos Eduardo da S. Papa – 232013390, Thiago Ferreira – 232028230}
+
+    \vspace{0.35cm}   
+
+    {\fontsize{11}{13}\selectfont 
+    Turma 01}
+    
+    \vspace{1cm}  
+\end{center}
+]
+
+\section{OBJETIVOS}
+
+\hspace{1cm} O experimento tem como propósito analisar a curva de resposta em corrente contínua (DC) de um sensor de corrente do tipo Hall, fabricado pela Honeywell, de modo a estimar o valor do campo magnético $\vec{B}$ gerado no circuito magnético. Além disso, busca-se determinar a permeabilidade magnética da ferrite utilizada no núcleo do sensor, por meio das medições realizadas com o sensor Hall, possibilitando assim compreender o comportamento do material frente às variações do campo aplicado e da corrente no enrolamento.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=5cm]{PrimitiveCell.png}
+%     \caption{EXEMPLO DE IMAGEM}
+%     \label{fig:label}
+% \end{figure}
+
+% \vspace{.75cm}
+
+\section{MATERIAIS e EQUIPAMENTO UTILIZADOS}
+
+\begin{itemize}
+    \item Sensor Hall de Corrente (Honeywell – CSLA1CD) com
+regulador de tensão;
+    \item Ponte de Impeâncias 1650-A ou 1650-B da General
+    Radio;
+    \item Varivolt (0-240 Vac) com cabo para adaptação à tomada;
+    \item Fonte LEEPUC Mod.402-A (2);
+    \item Multímetro (2);
+    \item Resistor limitador de corrente;
+    \item Cabos banana e garras.
+\end{itemize}
+
+% \vspace{.75cm}
+
+\section{PROCEDIMENTOS EXPERIMENTAIS}
+
+\noindent\textit{A. Medida de Indutância do Sensor}
+
+\hspace{1cm} Nesta etapa inicial do experimento, procede-se à determinação dos valores de permeabilidade e relutância magnética do circuito, a partir da indutância obtida no enrolamento do sensor. Tais grandezas são fundamentais para estimar a densidade de campo magnético em função da corrente aplicada posteriormente.
+
+\hspace{1cm} A medição da indutância é realizada utilizando uma ponte de impedância, conectando-se os terminais do enrolamento aos pontos de medição do instrumento. O procedimento consiste em ajustar cuidadosamente a ponte até que o equilíbrio seja atingido, registrando o valor da indutância correspondente ao menor fator de qualidade (Q) observado, de modo a garantir maior precisão no valor obtido.
+
+\noindent\textit{B. Curva de resposta DC do Sensor}
+
+\hspace{1cm} Nesta segunda parte do experimento, busca-se avaliar a sensibilidade da tensão de saída do sensor frente a uma corrente contínua (DC) aplicada ao enrolamento, bem como relacionar essa resposta à densidade do campo magnético gerado pela corrente.
+
+\hspace{1cm} Para isso, o circuito deve ser montado conforme o diagrama apresentado na Figura 1, assegurando o correto posicionamento do sensor e a adequada conexão dos instrumentos de medição. Em seguida, varia-se gradualmente a corrente DC e registram-se os valores correspondentes de tensão de saída, o que permitirá a construção da curva característica de resposta do dispositivo.
+
+\vspace{-.25cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{Ativo 1.pdf}
+    \caption{Diagrma do circuito implementado}
+    \label{fig:label}
+    \vspace{-.25cm}
+\end{figure}
+
+\vspace{.25cm}
+
+\section{RESULTADOS EXPERIMENTAIS}
+
+\hspace{1cm} Seguindo o procedimento proposto para a primeira etapa, foram determinados os valores de indutância e fator de qualidade (Q) do enrolamento, conforme Tabela I.
+
+\vspace{-.35cm}
+
+\begin{table}[htbp]
+    \centering
+    \caption{Indutância e fator de qualidade medido}
+    \label{tab:your_table_label}
+    \vspace{0.25cm}
+    \begin{tabular}{ >{\centering\arraybackslash}m{3cm}  >{\centering\arraybackslash}m{3cm} }
+        \hline
+        \textbf{Indutância [$\mu H$]} & \textbf{Fator de qualidade} \\
+        \hline
+        L = 128 & Q = 2.6 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\vspace{-.25cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{Ativo 2.pdf}
+    \caption{Diagrma do circuito implementado}
+    \vspace{-.25cm}
+    \label{fig:label}
+\end{figure}
+
+\hspace{1cm} Em continuidade, na segunda etapa, foram obtidos os valores de corrente contínua (DC) e das respectivas tensões de saída, apresentados na Tabela II. Observa-se que, diferentemente do que ocorre em representações ideais, o sensor de corrente Honeywell – CSLA1CD apresenta um valor de tensão de offset distinto de zero mesmo para corrente nula (0 A), devido à forma como a medição é realizada em diferentes pontos do eixo $x$. Por essa razão, a segunda coluna da tabela foi normalizada, de modo a compensar o valor de offset e permitir uma análise comparativa mais coerente entre as medições.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Medições de Tensão em Função da Corrente DC}
+    \label{tab:medicoes_tensao}
+    \vspace{0.25cm}
+    \begin{tabular}{ccc}
+        \hline
+        \rule{0pt}{3ex}\textbf{Corrente DC [A]} & \textbf{V}$_{saida}$ \textbf{s/ offset [V]} & \textbf{V [V]} \\ [5pt]
+        \hline
+        \rule{0pt}{3ex}1.4   & 3.22 &  9.63 \\
+        1.2   & 2.81 &  9.22 \\
+        1     & 2.39 &  8.80 \\
+        0.8   & 1.94 &  8.35 \\
+        0.6   & 1.47 &  7.88 \\
+        0.4   & 0.97 &  7.38 \\
+        0.2   & 0.50 &  6.91 \\
+        0     & 0.00 &  6.41 \\
+        -0.2  & -0.49 &  5.92 \\
+        -0.4  & -1.00 &  5.41 \\
+        -0.6  & -1.46 &  4.95 \\
+        -0.8  & -1.95 &  4.46 \\
+        -1.0  & -2.41 &  4.00 \\
+        -1.2  & -2.84 &  3.57 \\
+        -1.4  & -3.27 &  3.14 \\ [5pt]
+        \hline
+    \end{tabular}
+\end{table}
+
+% \vspace{.75cm}
+
+\section{ANALISE DOS RESULTADOS EXPERIMENTAIS}
+
+\hspace{1cm} Com base nos valores medidos de indutância e nas dimensões geométricas do circuito magnético $(l_g, l_f \,\text{e} \, A)$, foi possível calcular a permeabilidade da ferrite e a relutância total do sistema, utilizando as equações apresentadas a seguir:
+% \vspace{-.25cm}
+\begin{equation*}
+    L = \frac{N^2}{\mathfrak{R}}
+\end{equation*}
+\vspace{-.25cm}
+\begin{equation*}
+    \mathfrak{R} = \frac{l_g}{\mu_0A} + \frac{l_f}{\mu_fA}
+\end{equation*}
+
+\hspace{1cm} onsiderando que o enrolamento contém N=50 espiras, a relutância total foi obtida pela expressão:
+
+\begin{equation*}
+    \mathfrak{R} = \frac{50^2}{170\cdot10^{-6}} = 14705882.352941 \, \left[\frac{Ae}{Wb}\right]
+\end{equation*}
+
+\hspace{1cm} ACom esses dados, determinou-se a permeabilidade magnética efetiva do material:
+
+\begin{equation*}
+    \mu_f = \left[ \left( \mathfrak{R} - \frac{l_g}{\mu_0A} \right) \frac{A}{l_f} \right]^{-1} = -4.16207 \cdot 10^{-5} \, \left[\frac{H}{m}\right]
+\end{equation*}
+
+\hspace{1cm} Após a coleta completa dos dados e o preenchimento da Tabela II, foi construída a curva da tensão de saída em função da corrente, ilustrada na Figura 3.
+
+{\Huge PLOTAR GRÁFICO}
+
+\hspace{1cm} A análise do gráfico demonstra que a tensão de saída varia linearmente com a corrente aplicada, indicando o comportamento linear do circuito magnético dentro da faixa de operação observada.
+
+\hspace{1cm} Em seguida, aplicou-se a relação $B = \frac{NI}{\mathfrak{R}A} $ para determinar a densidade de fluxo magnético em função da corrente, sendo então construída a curva $B \times V$ para análise da sensibilidade do sensor.
+
+\begin{table}[htbp]
+    \centering
+    \caption{Medições de Tensão em Função da Corrente DC}
+    \label{tab:medicoes_tensao}
+    \vspace{0.25cm}
+    \begin{tabular}{ccc}
+        \hline
+        \rule{0pt}{3ex}\textbf{\textbf{V}}$_{saida}$ \textbf{s/ offset [V]} & \textbf{B} $\frac{Wb}{m^2}$ \\[5pt]
+        \hline
+        \rule{0pt}{3ex}3.22 & ? \\
+        2.81 &  ? \\
+        2.39 &  ? \\
+        1.94 &  ? \\
+        1.47 &  ? \\
+        0.97 &  ? \\
+        0.50 &  ? \\
+        0.00 &  ? \\
+        -0.49 &  ? \\
+        -1.00 &  ? \\
+        -1.46 &  ? \\
+        -1.95 &  ? \\
+        -2.41 &  ? \\
+        -2.84 &  ? \\
+        -3.27 &  ? \\[5pt]
+        \hline
+    \end{tabular}
+\end{table}
+
+\hspace{1cm} Verifica-se que, devido à linearidade do circuito, o módulo da densidade do campo magnético é proporcional ao módulo da corrente aplicada, e que o sentido da corrente determina a direção do campo no interior do sensor Hall.
+
+\hspace{1cm} Os resultados também evidenciam que materiais de alta permeabilidade magnética, como a ferrite, são essenciais para o bom desempenho do sensor Hall. Considerando que a permeabilidade do ar é cerca de 30 vezes menor que a da ferrite, o aumento da fração de volume ocupada por ferrite e a consequente redução da relutância total resultam em campos magnéticos mais intensos e, portanto, em tensões Hall mais precisas. Outra estratégia de aprimoramento seria o aumento do número de espiras do enrolamento, o que também ampliaria o campo gerado e a sensibilidade do sensor.
+
+{\Huge PLOTAR GRÁFICO}
+
+\section{CONCLUSÃO}
+
+\hspace{1cm} Os resultados obtidos neste experimento demonstram que a curva de resposta DC do sensor Hall está em plena concordância com o comportamento teórico esperado, validando as relações entre tensão de saída, corrente aplicada e densidade de campo magnético. Além disso, foi possível determinar e analisar a permeabilidade magnética do material de ferrite, observando sua influência direta sobre a intensidade do campo.
+
+\hspace{1cm} Conclui-se que o efeito Hall constitui um fenômeno de grande relevância tecnológica, com ampla aplicação em sistemas de medição, controle e automação. Um exemplo clássico é o uso de sensores Hall em sistemas automotivos, especialmente para a detecção da velocidade de rotação das rodas, onde o movimento de um disco ferromagnético diante do sensor gera variações de fluxo magnético detectáveis de forma precisa e confiável.
+
+\section{REFERENCIAS BIBLIOGRAFICAS}
+
+\small
+\begin{enumerate}
+
+    \item CESCHIN, Artemis M. Apostila de materiais eletricos e magneticos.
+    
+    \item REZENDE, Sergio M. Materiais e Dispositivos Eletrônicos. 2ª ed. São Paulo: Editora Livraria da Física, 2004.
+
+    \item BOSCH. Speed Sensor Hall-Effect HA-Di. [online]. Disponível em: \url{https://www.bosch-motorsport.com/content/downloads/Raceparts/en-GB/53422859208177803.html#:~:text=This%20sensor%20is%20designed%20for,place%20of%20the%20sensors%20diff}
+
+    \item HAYT, W. H. Jr. Eletromagnetismo. 6ª ed. Rio de Janeiro: LTC, 1995.
+    
+\end{enumerate}
+
+\end{document}
