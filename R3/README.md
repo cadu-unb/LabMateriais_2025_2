@@ -1,7 +1,7 @@
 
 ## 📘 **`README.md`**
 
-```markdown
+
 # Hall Effect Analysis Toolkit ⚡
 
 A clean, modular, and reproducible Python toolkit for analyzing **Hall effect experiments**.
@@ -120,6 +120,3 @@ Electrical Engineering Department – ENE, University of Brasília (UnB)
 
 This project is released under the **MIT License**.
 Feel free to use, modify, and distribute with attribution.
-
-```
-
