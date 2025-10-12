@@ -10,7 +10,7 @@
 
 \renewcommand{\tablename}{Tabela}
 
-% \input{cor.tex}
+% \input{styles.tex}
 
 % Configuracao da pagina
 \geometry{
@@ -40,7 +40,7 @@
 \twocolumn[
 \begin{center}
     {\fontsize{16}{19}\selectfont\bfseries 
-    Experimento 3\\ Estudo dirigido sobre estruturas cristalinas}
+    Experimento 3\\ Estudo dirigido sobre Efeito Hall}
 
     \vspace{1cm}
     
@@ -190,40 +190,12 @@ gerada para diferentes valores de corrente no enrolamento.
 
 \section{ANALISE DOS RESULTADOS EXPERIMENTAIS}
 
-\hspace{1cm} Com base nos valores medidos de indutância e nas dimensões geométricas do circuito magnético $(l_g, l_f \,\text{e} \, A)$, foi possível calcular a permeabilidade da ferrite e a relutância total do sistema, utilizando as equações apresentadas a seguir:
-% \vspace{-.25cm}
-\begin{equation*}
-    L = \frac{N^2}{\mathfrak{R}}
-\end{equation*}
-% \vspace{-.25cm}
-\begin{equation*}
-    \mathfrak{R} = \frac{l_g}{\mu_0A} + \frac{l_f}{\mu_fA}
-\end{equation*}
-
-\hspace{1cm} Considerando que o enrolamento contém N=50 espiras, a relutância total foi obtida pela expressão:
-
-\begin{equation*}
-    \mathfrak{R} = \frac{50^2}{170\cdot10^{-6}} = 14705882.352941 \, \left[\frac{Ae}{Wb}\right]
-\end{equation*}
-
-\hspace{1cm} Com esses dados, determinou-se a permeabilidade magnética efetiva do material:
-
-\begin{equation*}
-    \mu_f = \left[ \left( \mathfrak{R} - \frac{l_g}{\mu_0A} \right) \frac{A}{l_f} \right]^{-1} = -4.16207 \cdot 10^{-5} \, \left[\frac{H}{m}\right]
-\end{equation*}
-
-\hspace{1cm} Após a coleta completa dos dados e o preenchimento da Tabela II, foi construída a curva da tensão de saída em função da corrente, ilustrada na Figura 3.
-
 \begin{figure}[h]
     \centering
-    \includegraphics[width=8.5cm]{figures/hall_voltage_vs_current.png}
-    \caption{Tensão versos Coerente}
+    \includegraphics[width=8.5cm]{figures/pt-br/hall_voltage_vs_current.png}
+    \caption{Tensão versos Corrente}
     \label{fig:hall_voltage_vs_current}
 \end{figure}
-
-\hspace{1cm} A análise do gráfico demonstra que a tensão de saída varia linearmente com a corrente aplicada, indicando o comportamento linear do circuito magnético dentro da faixa de operação observada.
-
-\hspace{1cm} Em seguida, aplicou-se a relação $B = \frac{NI}{\mathfrak{R}A} $ para determinar a densidade de fluxo magnético em função da corrente, sendo então construída a curva $B \times V$ para análise da sensibilidade do sensor.
 
 \begin{table}[htbp]
     \centering
@@ -253,24 +225,132 @@ gerada para diferentes valores de corrente no enrolamento.
     \end{tabular}
 \end{table}
 
-\hspace{1cm} Verifica-se que, devido à linearidade do circuito, o módulo da densidade do campo magnético é proporcional ao módulo da corrente aplicada, e que o sentido da corrente determina a direção do campo no interior do sensor Hall.
-
-\hspace{1cm} Os resultados também evidenciam que materiais de alta permeabilidade magnética, como a ferrite, são essenciais para o bom desempenho do sensor Hall. Considerando que a permeabilidade do ar é cerca de 30 vezes menor que a da ferrite, o aumento da fração de volume ocupada por ferrite e a consequente redução da relutância total resultam em campos magnéticos mais intensos e, portanto, em tensões Hall mais precisas. Outra estratégia de aprimoramento seria o aumento do número de espiras do enrolamento, o que também ampliaria o campo gerado e a sensibilidade do sensor.
-
-% {\Huge PLOTAR GRÁFICO}
-
 \begin{figure}[h]
     \centering
-    \includegraphics[width=8.5cm]{figures/hall_voltage_vs_B.png}
+    \includegraphics[width=8.5cm]{figures/pt-br/hall_voltage_vs_B.png}
     \caption{Tensão versos Campo}
     \label{fig:hall_voltage_vs_B}
 \end{figure}
 
+\hspace{1cm} A partir da Tabela 2 e dos Gráficos das Figuras 3 e 4, podemos observar que a tensão de saída do sensor Hall varia linearmente com a corrente contínua (DC) aplicada ao enrolamento e, consequentemente, com a densidade de fluxo magnético "B" gerada no circuito magnético. Podemos conirmar isso pelo ajuste linear obtido nas duas curvas, com coeficientes angulares $2.37 \,\,[V/A]$ para a relação tensão e corrente e $6.96\cdot 10 \,\, [V/T]$  para a relação tensão e campo magnético.  
+
+\hspace{1cm} Além disso o valor do "offset" de tensão observado na quando a corrente é igual a zero é de aproximadamente  $0.08 \,\,[V]$,  de forma  que esse desvio acontece devido a assimetria de geometria, efeitos térmicos ou imperfeições de contato elétrico no elemento sensível. A normalização dos dados da coluna de sem offset permitiu eliminar essa contribuição e realizar uma análise comparativa.
+
+\hspace{1cm} Assim, na Tabela 1, a indutância medida no enrolamento foi de  $L=128 \, \mu \, \, [H]$   com fator de qualidade $Q=2.6$. Esses valores indicam um núcleo de ferrite com perdas moderadas, o que é compatível com o uso em frequências baixas do sensor, como foi no caso do experimento. Assim, Com base nesse valor de indutância e utilizando o número de espiras $N=50$, calculamos a relutância total do circuito magnético como: 
+
+
+\begin{equation*}
+    L = \frac{N^2}{\mathfrak{R}}
+\end{equation*}
+
+\begin{equation*}
+    \mathfrak{R} = \frac{l_g}{\mu_0A} + \frac{l_f}{\mu_fA}
+\end{equation*}
+
+\begin{equation*}
+    \mathfrak{R} = \frac{50^2}{170\cdot10^{-6}} = 14705882.352941 \, \left[\frac{Ae}{Wb}\right]
+\end{equation*}
+
+\begin{equation*}
+    \mu_f = \left[ \left( \mathfrak{R} - \frac{l_g}{\mu_0A} \right) \frac{A}{l_f} \right]^{-1} = -4.16207 \cdot 10^{-5} \, \left[\frac{H}{m}\right]
+\end{equation*}
+
+A partir da relutância, foi possível determinar a permeabilidade magnética efetiva: 
+
+$$(\mu f)=4.16\cdot 10^{-5} \,\, [H/m]$$
+
+\hspace{1cm} O valor negativo obtido no cálculo vêm da forma simbólica da equação, mas corresponde a uma permeabilidade efetiva positiva de ordem $10^{-5}$.
+
+\hspace{1cm} Por fim, Os resultados experimentais também mostram que a relação entre a tensão Hall e o campo magnético é linear e simétrica em torno da origem (Figura 4), o que confirma o alinhamento do sensor no campo.
+
+% =================================== Arquivo{begin}
+
+% \hspace{1cm} Com base nos valores medidos de indutância e nas dimensões geométricas do circuito magnético $(l_g, l_f \,\text{e} \, A)$, foi possível calcular a permeabilidade da ferrite e a relutância total do sistema, utilizando as equações apresentadas a seguir:
+
+% % \vspace{-.25cm}
+% \begin{equation*}
+%     L = \frac{N^2}{\mathfrak{R}}
+% \end{equation*}
+% % \vspace{-.25cm}
+% \begin{equation*}
+%     \mathfrak{R} = \frac{l_g}{\mu_0A} + \frac{l_f}{\mu_fA}
+% \end{equation*}
+
+% \hspace{1cm} Considerando que o enrolamento contém N=50 espiras, a relutância total foi obtida pela expressão:
+
+% \begin{equation*}
+%     \mathfrak{R} = \frac{50^2}{170\cdot10^{-6}} = 14705882.352941 \, \left[\frac{Ae}{Wb}\right]
+% \end{equation*}
+
+% \hspace{1cm} Com esses dados, determinou-se a permeabilidade magnética efetiva do material:
+
+% \begin{equation*}
+%     \mu_f = \left[ \left( \mathfrak{R} - \frac{l_g}{\mu_0A} \right) \frac{A}{l_f} \right]^{-1} = -4.16207 \cdot 10^{-5} \, \left[\frac{H}{m}\right]
+% \end{equation*}
+
+% \hspace{1cm} Após a coleta completa dos dados e o preenchimento da Tabela II, foi construída a curva da tensão de saída em função da corrente, ilustrada na Figura 3.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=8.5cm]{figures/pt-br/hall_voltage_vs_current.png}
+%     \caption{Tensão versos Corrente}
+%     \label{fig:hall_voltage_vs_current}
+% \end{figure}
+
+% \hspace{1cm} A análise do gráfico demonstra que a tensão de saída varia linearmente com a corrente aplicada, indicando o comportamento linear do circuito magnético dentro da faixa de operação observada.
+
+% \hspace{1cm} Em seguida, aplicou-se a relação $B = \frac{NI}{\mathfrak{R}A} $ para determinar a densidade de fluxo magnético em função da corrente, sendo então construída a curva $B \times V$ para análise da sensibilidade do sensor.
+
+% \begin{table}[htbp]
+%     \centering
+%     \caption{Tensão de Saída e Densidade do Campo Magnético}
+%     \label{tab:Densidade_de_campo}
+%     \vspace{0.25cm}
+%     \begin{tabular}{ccc}
+%         \hline
+%         \rule{0pt}{3ex}\textbf{\textbf{V}}$_{saida}$ \textbf{s/ offset [V]} & \textbf{B} $\frac{Wb}{m^2}$ \\[5pt]
+%         \hline
+%         \rule{0pt}{3ex}3.22 & 0.047600 \\
+%         2.81 &  0.040800 \\
+%         2.39 &  0.034000 \\
+%         1.94 &  0.027200 \\
+%         1.47 &  0.020400 \\
+%         0.97 &  0.013600 \\
+%         0.50 &  0.006800 \\
+%         0.00 &  0.000000 \\
+%         -0.49 &  -0.006800 \\
+%         -1.00 &  -0.013600 \\
+%         -1.46 &  -0.020400 \\
+%         -1.95 &  -0.027200 \\
+%         -2.41 &  -0.034000 \\
+%         -2.84 &  -0.040800 \\
+%         -3.27 &  -0.047600 \\[5pt]
+%         \hline
+%     \end{tabular}
+% \end{table}
+
+% \hspace{1cm} Verifica-se que, devido à linearidade do circuito, o módulo da densidade do campo magnético é proporcional ao módulo da corrente aplicada, e que o sentido da corrente determina a direção do campo no interior do sensor Hall.
+
+% \hspace{1cm} Os resultados também evidenciam que materiais de alta permeabilidade magnética, como a ferrite, são essenciais para o bom desempenho do sensor Hall. Considerando que a permeabilidade do ar é cerca de 30 vezes menor que a da ferrite, o aumento da fração de volume ocupada por ferrite e a consequente redução da relutância total resultam em campos magnéticos mais intensos e, portanto, em tensões Hall mais precisas. Outra estratégia de aprimoramento seria o aumento do número de espiras do enrolamento, o que também ampliaria o campo gerado e a sensibilidade do sensor.
+
+% % {\Huge PLOTAR GRÁFICO}
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=8.5cm]{figures/pt-br/hall_voltage_vs_B.png}
+%     \caption{Tensão versos Campo}
+%     \label{fig:hall_voltage_vs_B}
+% \end{figure}
+
+% =================================== Arquivo{end}
+
 \section{CONCLUSÃO}
 
-\hspace{1cm} Os resultados obtidos neste experimento demonstram que a curva de resposta DC do sensor Hall está em plena concordância com o comportamento teórico esperado, validando as relações entre tensão de saída, corrente aplicada e densidade de campo magnético. Além disso, foi possível determinar e analisar a permeabilidade magnética do material de ferrite, observando sua influência direta sobre a intensidade do campo.
+\hspace{1cm} O experimento nos permitiu caracterizar o comportamento de um sensor de efeito Hall e entender a relação entre a corrente aplicada, o campo magnético gerado e a tensão Hall resultante.
 
-\hspace{1cm} Conclui-se que o efeito Hall constitui um fenômeno de grande relevância tecnológica, com ampla aplicação em sistemas de medição, controle e automação. Um exemplo clássico é o uso de sensores Hall em sistemas automotivos, especialmente para a detecção da velocidade de rotação das rodas, onde o movimento de um disco ferromagnético diante do sensor gera variações de fluxo magnético detectáveis de forma precisa e confiável.
+\hspace{1cm} Também observamos que a tensão de saída do sensor varia linearmente com a corrente contínua aplicada, comportamento que se manteve também quando analisada em função da densidade de fluxo magnético. A proporcionalidade teórica pôde ser confirmada pela linearidade dos resultados, prevista pelo efeito Hall.
+
+\hspace{1cm} Além disso, o valor de "offset" de tensão obtido para corrente igual a zero, foi usado para corrigir por normalização, os próximos valores encontrados. Assim, a partir das medições da indutância e do fator de qualidade, determinamos a relutância total do circuito magnético e estimamos a permeabilidade efetiva da ferrite utilizada como núcleo.
 
 \section{REFERENCIAS BIBLIOGRAFICAS}
 
