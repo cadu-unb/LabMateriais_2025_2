@@ -5,8 +5,8 @@
 \usepackage{times}
 \usepackage{titlesec}
 \usepackage{url}
-\usepackage{graphicx,xcolor,comment,enumerate,multirow,multicol} 
-\usepackage{amsmath,amsthm,amsfonts,amssymb,dsfont,mathtools, array}
+\usepackage{graphicx,xcolor,comment,enumerate,multirow,multicol, float} 
+\usepackage{amsmath,amsthm,amsfonts,amssymb,dsfont,mathtools,array}
 
 \renewcommand{\tablename}{Tabela}
 
@@ -114,25 +114,25 @@ gerada para diferentes valores de corrente no enrolamento.
 
 \hspace{1cm} Com esses resultados foi possível correlacionar a tensão de saída do sensor Hall com o campo magnético efetivo produzido pelo circuito, determinando experimentalmente a sensibilidade do sensor e analisando o comportamento do material de ferrite variando corrente e do campo aplicado.
 
-\vspace{-.25cm}
+% \vspace{-.25cm}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=8cm]{Ativo 1.pdf}
     \caption{Diagrma do circuito implementado}
-    \label{fig:label}
+    \label{fig:circuito_implementado}
     \vspace{-.25cm}
 \end{figure}
 
-\vspace{.25cm}
+% \vspace{.25cm}
 
 \section{RESULTADOS EXPERIMENTAIS}
 
 \hspace{1cm} Seguindo o procedimento proposto para a primeira etapa, foram determinados os valores de indutância e fator de qualidade (Q) do enrolamento, conforme Tabela I.
 
-\vspace{-.35cm}
+% \vspace{-.35cm}
 
-\begin{table}[htbp]
+\begin{table}[h]
     \centering
     \caption{Indutância e fator de qualidade medido}
     \label{tab:your_table_label}
@@ -146,14 +146,14 @@ gerada para diferentes valores de corrente no enrolamento.
     \end{tabular}
 \end{table}
 
-\vspace{-.25cm}
+% \vspace{-.25cm}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=8cm]{Ativo 2.pdf}
-    \caption{Diagrma do circuito implementado}
-    \vspace{-.25cm}
-    \label{fig:label}
+    \includegraphics[width=7.25cm]{Ativo 2.pdf}
+    \caption{Diagrma dos campos}
+    % \vspace{-.25cm}
+    \label{fig:campos}
 \end{figure}
 
 \hspace{1cm} Em continuidade, na segunda etapa, foram obtidos os valores de corrente contínua (DC) e das respectivas tensões de saída, apresentados na Tabela II. Observa-se que, diferentemente do que ocorre em representações ideais, o sensor de corrente Honeywell – CSLA1CD apresenta um valor de tensão de offset distinto de zero mesmo para corrente nula (0 A), devido à forma como a medição é realizada em diferentes pontos do eixo $x$. Por essa razão, a segunda coluna da tabela foi normalizada, de modo a compensar o valor de offset e permitir uma análise comparativa mais coerente entre as medições.
@@ -195,18 +195,18 @@ gerada para diferentes valores de corrente no enrolamento.
 \begin{equation*}
     L = \frac{N^2}{\mathfrak{R}}
 \end{equation*}
-\vspace{-.25cm}
+% \vspace{-.25cm}
 \begin{equation*}
     \mathfrak{R} = \frac{l_g}{\mu_0A} + \frac{l_f}{\mu_fA}
 \end{equation*}
 
-\hspace{1cm} onsiderando que o enrolamento contém N=50 espiras, a relutância total foi obtida pela expressão:
+\hspace{1cm} Considerando que o enrolamento contém N=50 espiras, a relutância total foi obtida pela expressão:
 
 \begin{equation*}
     \mathfrak{R} = \frac{50^2}{170\cdot10^{-6}} = 14705882.352941 \, \left[\frac{Ae}{Wb}\right]
 \end{equation*}
 
-\hspace{1cm} ACom esses dados, determinou-se a permeabilidade magnética efetiva do material:
+\hspace{1cm} Com esses dados, determinou-se a permeabilidade magnética efetiva do material:
 
 \begin{equation*}
     \mu_f = \left[ \left( \mathfrak{R} - \frac{l_g}{\mu_0A} \right) \frac{A}{l_f} \right]^{-1} = -4.16207 \cdot 10^{-5} \, \left[\frac{H}{m}\right]
@@ -214,7 +214,12 @@ gerada para diferentes valores de corrente no enrolamento.
 
 \hspace{1cm} Após a coleta completa dos dados e o preenchimento da Tabela II, foi construída a curva da tensão de saída em função da corrente, ilustrada na Figura 3.
 
-{\Huge PLOTAR GRÁFICO}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8.5cm]{figures/hall_voltage_vs_current.png}
+    \caption{Tensão versos Coerente}
+    \label{fig:hall_voltage_vs_current}
+\end{figure}
 
 \hspace{1cm} A análise do gráfico demonstra que a tensão de saída varia linearmente com a corrente aplicada, indicando o comportamento linear do circuito magnético dentro da faixa de operação observada.
 
@@ -222,28 +227,28 @@ gerada para diferentes valores de corrente no enrolamento.
 
 \begin{table}[htbp]
     \centering
-    \caption{Medições de Tensão em Função da Corrente DC}
-    \label{tab:medicoes_tensao}
+    \caption{Tensão de Saída e Densidade do Campo Magnético}
+    \label{tab:Densidade_de_campo}
     \vspace{0.25cm}
     \begin{tabular}{ccc}
         \hline
         \rule{0pt}{3ex}\textbf{\textbf{V}}$_{saida}$ \textbf{s/ offset [V]} & \textbf{B} $\frac{Wb}{m^2}$ \\[5pt]
         \hline
-        \rule{0pt}{3ex}3.22 & ? \\
-        2.81 &  ? \\
-        2.39 &  ? \\
-        1.94 &  ? \\
-        1.47 &  ? \\
-        0.97 &  ? \\
-        0.50 &  ? \\
-        0.00 &  ? \\
-        -0.49 &  ? \\
-        -1.00 &  ? \\
-        -1.46 &  ? \\
-        -1.95 &  ? \\
-        -2.41 &  ? \\
-        -2.84 &  ? \\
-        -3.27 &  ? \\[5pt]
+        \rule{0pt}{3ex}3.22 & 0.047600 \\
+        2.81 &  0.040800 \\
+        2.39 &  0.034000 \\
+        1.94 &  0.027200 \\
+        1.47 &  0.020400 \\
+        0.97 &  0.013600 \\
+        0.50 &  0.006800 \\
+        0.00 &  0.000000 \\
+        -0.49 &  -0.006800 \\
+        -1.00 &  -0.013600 \\
+        -1.46 &  -0.020400 \\
+        -1.95 &  -0.027200 \\
+        -2.41 &  -0.034000 \\
+        -2.84 &  -0.040800 \\
+        -3.27 &  -0.047600 \\[5pt]
         \hline
     \end{tabular}
 \end{table}
@@ -252,7 +257,14 @@ gerada para diferentes valores de corrente no enrolamento.
 
 \hspace{1cm} Os resultados também evidenciam que materiais de alta permeabilidade magnética, como a ferrite, são essenciais para o bom desempenho do sensor Hall. Considerando que a permeabilidade do ar é cerca de 30 vezes menor que a da ferrite, o aumento da fração de volume ocupada por ferrite e a consequente redução da relutância total resultam em campos magnéticos mais intensos e, portanto, em tensões Hall mais precisas. Outra estratégia de aprimoramento seria o aumento do número de espiras do enrolamento, o que também ampliaria o campo gerado e a sensibilidade do sensor.
 
-{\Huge PLOTAR GRÁFICO}
+% {\Huge PLOTAR GRÁFICO}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8.5cm]{figures/hall_voltage_vs_B.png}
+    \caption{Tensão vs Campo}
+    \label{fig:hall_voltage_vs_B}
+\end{figure}
 
 \section{CONCLUSÃO}
 
@@ -269,7 +281,7 @@ gerada para diferentes valores de corrente no enrolamento.
     
     \item REZENDE, Sergio M. Materiais e Dispositivos Eletrônicos. 2ª ed. São Paulo: Editora Livraria da Física, 2004.
 
-    \item BOSCH. Speed Sensor Hall-Effect HA-Di. [online]. Disponível em: \url{https://www.bosch-motorsport.com/content/downloads/Raceparts/en-GB/53422859208177803.html#:~:text=This%20sensor%20is%20designed%20for,place%20of%20the%20sensors%20diff}
+    % \item BOSCH. Speed Sensor Hall-Effect HA-Di. [online]. Disponível em: \url{https://www.bosch-motorsport.com/content/downloads/Raceparts/en-GB/53422859208177803.html#:~:text=This%20sensor%20is%20designed%20for,place%20of%20the%20sensors%20diff}
 
     \item HAYT, W. H. Jr. Eletromagnetismo. 6ª ed. Rio de Janeiro: LTC, 1995.
     
