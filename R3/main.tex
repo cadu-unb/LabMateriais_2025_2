@@ -139,9 +139,9 @@ gerada para diferentes valores de corrente no enrolamento.
     \vspace{0.25cm}
     \begin{tabular}{ >{\centering\arraybackslash}m{3cm}  >{\centering\arraybackslash}m{3cm} }
         \hline
-        \textbf{Indutância [$\mu H$]} & \textbf{Fator de qualidade} \\
-        \hline
-        L = 128 & Q = 2.6 \\
+        \rule{0pt}{3ex} \textbf{Indutância [$\mu H$]} & \rule{0pt}{3ex} \textbf{Fator de qualidade} \\ [7pt]
+        \hline 
+        \rule{0pt}{3ex} L = 128 & \rule{0pt}{3ex} Q = 2.6 \\[5pt]
         \hline
     \end{tabular}
 \end{table}
@@ -243,13 +243,19 @@ gerada para diferentes valores de corrente no enrolamento.
     L = \frac{N^2}{\mathfrak{R}}
 \end{equation*}
 
+\vspace{-.5cm}
+
 \begin{equation*}
     \mathfrak{R} = \frac{l_g}{\mu_0A} + \frac{l_f}{\mu_fA}
 \end{equation*}
 
+\vspace{-.5cm}
+
 \begin{equation*}
-    \mathfrak{R} = \frac{50^2}{170\cdot10^{-6}} = 14705882.352941 \, \left[\frac{Ae}{Wb}\right]
+    \mathfrak{R} = \frac{50^2}{128\cdot10^{-6}} = 19.53125\cdot 10^6 \, \left[\frac{Ae}{Wb}\right]
 \end{equation*}
+
+\vspace{-.5cm}
 
 \begin{equation*}
     \mu_f = \left[ \left( \mathfrak{R} - \frac{l_g}{\mu_0A} \right) \frac{A}{l_f} \right]^{-1}
@@ -257,7 +263,7 @@ gerada para diferentes valores de corrente no enrolamento.
 
 A partir da relutância, foi possível determinar a permeabilidade magnética efetiva ($\mu_f$): 
 
-$$\mu_f=4.16\cdot 10^{-5} \,\, \left[\frac{H}{m}\right]$$
+$$\mu_f=4.50\cdot 10^{-5} \,\, \left[\frac{H}{m}\right]$$
 
 \hspace{1cm} O valor negativo obtido no cálculo vêm da forma simbólica da equação, mas corresponde a uma permeabilidade efetiva positiva de ordem $10^{-5}$.
 
