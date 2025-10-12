@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1760282803.02901 "d:/Área de Trabalho/UnB/2º_Graduação_Documentos/5_Semestre/LAB_Materias/LabMateriais_2025_2/R3/main.tex" "main.pdf" "main" 1760282804.03332 0
+["pdflatex"] 1760282993.95461 "d:/Área de Trabalho/UnB/2º_Graduação_Documentos/5_Semestre/LAB_Materias/LabMateriais_2025_2/R3/main.tex" "main.pdf" "main" 1760282994.96689 0
   "Ativo 1.pdf" 1759620494 71003 2e7e3185856b7cb4c5badd3bf8c03c39 ""
   "Ativo 2.pdf" 1759628788 48478 a61b589232586dbb7df1e6e192e2437b ""
   "C:/Users/Cadu/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1759661089 83289 6475133bcef74450cd8cdafba625486e ""
@@ -84,11 +84,11 @@
   "C:/Users/Cadu/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1749468414 33259 db80f750a01491473161bd4d0f6986d2 ""
   "C:/Users/Cadu/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/Cadu/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "d:/Área de Trabalho/UnB/2º_Graduação_Documentos/5_Semestre/LAB_Materias/LabMateriais_2025_2/R3/main.tex" 1760282802 12761 aa799a8212345741c10d1faa327ee6db ""
+  "d:/Área de Trabalho/UnB/2º_Graduação_Documentos/5_Semestre/LAB_Materias/LabMateriais_2025_2/R3/main.tex" 1760282992 12765 9ab3c69f706787c538fd7b2000fab529 ""
   "figures/hall_voltage_vs_B.png" 1760281385 152624 66d0d5d7a1dec0803035728c21086a11 ""
   "figures/hall_voltage_vs_current.png" 1760281385 154598 cc2d7a6c66dc93668effceab7e660946 ""
-  "main.aux" 1760282803 2343 667d887a60edcddb327fa3fc5049f813 "pdflatex"
-  "main.tex" 1760282802 12761 aa799a8212345741c10d1faa327ee6db ""
+  "main.aux" 1760282994 2347 4e80918c18a21f4be919ce6bbf62ca1a "pdflatex"
+  "main.tex" 1760282992 12765 9ab3c69f706787c538fd7b2000fab529 ""
   (generated)
   "main.aux"
   "main.log"
