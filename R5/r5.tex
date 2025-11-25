@@ -1,0 +1,133 @@
+\UseRawInputEncoding
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+\usepackage{enumitem}
+\usepackage{cvpr}
+\usepackage{times}
+\usepackage{epsfig}
+\usepackage{graphicx, color, xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[brazil, english]{babel}
+\setlength{\headheight}{1.5cm}
+\usepackage{threeparttable}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns}
+\usepackage{circuitikz}
+\usepackage{caption}
+\captionsetup[table]{name=Table}
+\renewcommand{\thetable}{\arabic{table}}
+\usepackage{siunitx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\setlist[itemize]{itemsep=0.3em, parsep=0pt, topsep=0.5em}
+
+\fancypagestyle{plain}{%\fancyhf{}%}
+\lhead{\includegraphics[width=5cm,height=2cm]{reduced_logoFT.png}}
+\rhead{\includegraphics[width=5cm,height=2cm]{reduced_logoUnB.png}}
+
+\renewcommand{\headrulewidth}{1pt}%
+}
+
+% Changing the caption and 'References' names to Portuguese.
+\addto\captionsenglish{
+  \renewcommand{\abstract}{Resumo} % Traduzindo o abstract inicial
+  \renewcommand{\figurename}{Figura}
+  \renewcommand{\tablename}{Tabela}
+  \renewcommand{\refname}{Referências bibliográficas}
+}
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Código}
+\renewcommand{\abstractname}{Resumo}
+
+
+% to-do: Using fontenc with T1 font encoding allows \hyphenation to take words with accents
+% as arguments. However, fontenc with T1 mess up with words containing 'ã' in all \subsection{}
+% commands.
+% If someone knows how to fix it, tell me!
+%
+%\usepackage[T1]{fontenc}
+
+% Put the words not correctly hyphenated down here. Words with accents must
+% be manually hyphenated in the text itself using the '\-' separator. See the examples
+% throughout this template.
+\hyphenation{co-e-ren-te u-sa-do de-li-mi-ta-do-res a-cer-ca va-lo-res cor-res-pon-den-te re-fe-ren-ci-a-das co-lu-na co-lu-nas em-bo-ra u-ti-li-da-de pro-ce-di-men-to ex-pe-ri-men-to fi-gu-ras}
+
+% If you comment hyperref and then uncomment it, you should delete
+% egpaper.aux before re-running latex.  (Or just hit 'q' on the first latex
+% run, let it finish, and you should be clear).
+\usepackage[breaklinks=true,bookmarks=true]{hyperref}
+
+\cvprfinalcopy % *** Uncomment this line for the final submission
+
+\begin{document}
+\title{5º experimento - Dispositivos semicondutores fotoemissores e fotoreceptores}
+
+\author{Larissa Simões\\
+{\tt\small 232028230@aluno.unb.br}\\
+{\tt\small 23/2028230}\\
+{\tt\small Turma 1A}
+\and
+Carlos Eduardo da S. Papa\\
+{\tt\small 232013390@aluno.unb.br}\\
+{\tt\small 23/2013390}\\
+{\tt\small Turma 1A}
+\and
+Thiago Ferreira\\
+{\tt\small 232028230@aluno.unb.br}\\
+{\tt\small 23/2028230}\\
+{\tt\small Turma 1A}
+}
+
+\maketitle
+\begin{abstract}
+Este relatório apresenta a caracterização elétrica de um diodo semicondutor do tipo BY127 por meio do levantamento de suas curvas $I_D\times V_D$ em polarização direta e reversa, bem como a análise funcional de múltiplas configurações de circuitos utilizando diodos retificadores sob sinal senoidal de 100 Hz e 8 Vpp. O trabalho investiga o comportamento dinâmico, a condução seletiva, a retificação e os efeitos de topologias como série, antissérie, antiparalelo e filtragem por capacitor. Todos os resultados são discutidos com base nos fundamentos teóricos da junção PN, leis de semicondutores e formas de onda obtidas experimentalmente.
+\end{abstract}
+
+%%%%%%%%%%%% OBJETIVOS %%%%%%%%%%%%%
+\input{r5-objetivos.tex} %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%% INTRODUÇÃO %%%%%%%%%%%%%
+\input{r5-intro.tex}  %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%% MATERIAIS %%%%%%%%%%%%%
+\input{r5-materiais.tex} %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%% PROCEDIMENTOS %%%%%%%%%%%%
+\input{r5-procedimentos.tex} %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%% RESULTADOS E ANÁLISE DOS RESULTADOS %%%%%%%%%%%
+\input{r5-resultados.tex}  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%% CONCLUSÕES %%%%%%%%%%%%%%
+\input{r5-conclusoes.tex} %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%% REFERÊNCIAS BIBLIOGRÁFICAS %%%%%%%%%%%%%%%%%%%%%%%%%
+{\small \bibliography{egbib} \bibliographystyle{ieee_fullname}} %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%% APENDICES %%%%%%%%
+% \appendix %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% SCRIPT PYTHON %%%%%%%%%%%%%%%%
+% \input{r5-apendice-script.tex} %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
