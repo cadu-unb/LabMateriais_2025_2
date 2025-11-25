@@ -1,1 +1,1 @@
-from experiment_data import dados_experimento_tabelas_1
+from experiment_data import dados_experimento_tabelas_1, dados_experimento_tabelas_2, dados_experimento_tabelas_3
