@@ -1,4 +1,3 @@
-\UseRawInputEncoding
 \documentclass[10pt,twocolumn,letterpaper]{article}
 
 \usepackage{enumitem}
@@ -33,8 +32,8 @@
 \setlist[itemize]{itemsep=0.3em, parsep=0pt, topsep=0.5em}
 
 \fancypagestyle{plain}{%\fancyhf{}%}
-\lhead{\includegraphics[width=5cm,height=2cm]{reduced_logoFT.png}}
-\rhead{\includegraphics[width=5cm,height=2cm]{reduced_logoUnB.png}}
+\lhead{\includegraphics[width=5cm]{image/unb.pdf}}
+\rhead{\includegraphics[width=5.9cm]{image/dep.pdf}}
 
 \renewcommand{\headrulewidth}{1pt}%
 }
@@ -90,17 +89,14 @@ Thiago Ferreira\\
 }
 
 \maketitle
+
 \begin{abstract}
-Este relatório apresenta a caracterização elétrica de um diodo semicondutor do tipo BY127 por meio do levantamento de suas curvas $I_D\times V_D$ em polarização direta e reversa, bem como a análise funcional de múltiplas configurações de circuitos utilizando diodos retificadores sob sinal senoidal de 100 Hz e 8 Vpp. O trabalho investiga o comportamento dinâmico, a condução seletiva, a retificação e os efeitos de topologias como série, antissérie, antiparalelo e filtragem por capacitor. Todos os resultados são discutidos com base nos fundamentos teóricos da junção PN, leis de semicondutores e formas de onda obtidas experimentalmente.
+Este experimento estuda dispositivos semicondutores fotoemissores e fotoreceptores, baseando-se na interação entre fótons e portadores de carga1. Os procedimentos incluem o levantamento da curva $I_D \times V_D$ de um LED e da curva $I_C \times V_{CE}$ de um fototransistor sob variadas condições de iluminação2. Serão também analisadas as tensões e correntes em fotocélulas3. Por fim, implementa-se um sistema de acoplamento óptico para avaliar a fidelidade na transmissão de sinais e o comportamento dinâmico do conjunto emissor-receptor.
 \end{abstract}
 
 %%%%%%%%%%%% OBJETIVOS %%%%%%%%%%%%%
 \input{r5-objetivos.tex} %%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%% INTRODUÇÃO %%%%%%%%%%%%%
-\input{r5-intro.tex}  %%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%% MATERIAIS %%%%%%%%%%%%%
 \input{r5-materiais.tex} %%%%%%%%%%%
