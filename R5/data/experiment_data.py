@@ -2,7 +2,7 @@
 utf-8':: packet tracer
 '''
 
-dados_experimento = {
+dados_experimento_tabelas_1 = {
     "V_fonte": [
         0.0, 0.2, 0.4, 0.6, 0.8, 1.0, 1.2, 1.4, 
         1.6, 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, 3.0, 
@@ -26,3 +26,5 @@ dados_experimento = {
         24.16, 25.82
     ]
 }
+
+__all__ = [dados_experimento_tabelas_1]

@@ -6,21 +6,3 @@ __pycache__/
 *.gz
 *.fdb_latexmk
 *.out
-
-# Ignore all images
-*.jpg
-*.jpeg
-*.png
-*.gif
-*.bmp
-*.tiff
-*.webp
-
-# Keep reduced images
-!reduced_*.jpg
-!reduced_*.jpeg
-!reduced_*.png
-!reduced_*.gif
-!reduced_*.bmp
-!reduced_*.tiff
-!reduced_*.webp
