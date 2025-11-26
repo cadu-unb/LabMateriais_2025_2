@@ -1,4 +1,5 @@
 import plotly.graph_objects as go
+import numpy as np
 
 # Data transcribed from Table 1
 # Vd = Voltage at the Diode [V]
